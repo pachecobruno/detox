@@ -384,9 +384,7 @@
      *                              prettier plugin
      */
     "prettier/prettier": [
-      "error", {
-        "useTabs": true
-      }
+      "error"
     ],
     /*
      *                              promise
