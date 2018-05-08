@@ -40,6 +40,8 @@ const allFiles = [...Object.values(iosFiles), ...Object.values(androidFiles)];
 
 allFiles.forEach((file) => {
 	const text = fs.readFileSync(file, 'utf8');
-	const formatted = prettier.format(text);
-	fs.writeFileSync(file, formatted);
+	prettier.resolveConfig(file).then((options) => {
+		const formatted = prettier.format(text, options);
+		fs.writeFileSync(file, formatted);
+	});
 });
