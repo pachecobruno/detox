@@ -14,7 +14,10 @@
 	"author": "DanielMSchmidt <danielmschmidt92@gmail.com>",
 	"license": "MIT",
 	"lint-staged": {
-		"*.{js,json,css,md}": ["prettier --write", "git add"]
+		"*.{js,json,css,md}": [
+			"prettier --write",
+			"git add"
+		]
 	},
 	"dependencies": {
 		"babel-generate-guard-clauses": "2.0.5",
@@ -29,10 +32,12 @@
 	"devDependencies": {
 		"jest": "^20.0.4",
 		"lint-staged": "^6.0.0",
-		"prettier": "^1.8.2"
+		"prettier": "^1.12.1"
 	},
 	"jest": {
-		"coveragePathIgnorePatterns": ["<rootDir>/index.js"],
+		"coveragePathIgnorePatterns": [
+			"<rootDir>/index.js"
+		],
 		"resetMocks": true,
 		"resetModules": true,
 		"coverageThreshold": {
